@@ -1,0 +1,167 @@
+:root {
+    --black: #000000;
+    --white: #F5F5F5;
+    --softWhite: #D9D9D9;
+    --border: #F8F8F8;
+    --skyBlue:#33B2E6; 
+    --beige: #FFF8DC;
+}
+
+body {
+    background-color: var(--white);
+}
+
+.backContainer{
+    display: flex;
+    align-items: center;
+    margin-left: 13rem;
+}
+
+.name, .email, .country, .cardInfo , .expiry, .cvv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    
+}
+
+input {
+    padding: 5px 0;
+}
+.backBtn {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.btn {
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.btn:hover {
+    cursor: pointer;
+
+}
+
+.btn:hover::after {
+    content:"back";
+    display: inline-block;
+    margin-left: 2px;
+    opacity: 0.9;
+}
+
+.container {
+    display: flex;              /* children sit side by side */
+    flex-direction: row;        /* horizontal layout */
+    justify-content: center;    /* center the whole container horizontally */
+    gap: 50px;                  /* space between left and right sections */
+    width: 100%;
+    max-width: 800px;           /* keeps container from stretching too much */
+    margin: 0 auto;             /* center container on page */
+    background-color: 
+}
+
+.container1,.container2 {
+    display: flex;
+    flex-direction: column;     /* stack internal elements vertically */
+    width: 300px;               /* fixed width for proper layout */
+}
+
+.submitButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: var(--skyBlue);
+    color: var(--beige); 
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    padding: 9px 50px;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.cardsSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.cards img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+}
+
+.all {
+    background-color: var(--softWhite);
+    width: 60%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+@media (max-width:1140px) { /* laptop / desktop*/
+    .container1 label, .container1 input, .container2 label, .container2 input {
+        margin: 0 1rem;
+    
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        flex-direction: column; 
+        gap: 20px;             
+        width: 90%;             
+        margin: 0 auto;         
+    }
+
+    .container1,.container2 {
+        width: 100%;            
+    }
+
+    .backContainer {
+        display: none;
+    }
+}
+
+
+ @media (max-width:767px) { /*mobile*/
+    .info {
+        margin-top: 0;
+    }
+
+    .submitButton {
+        margin-top: 0;
+    }
+
+    .button {
+        display: flex;
+        flex-direction: row;
+        padding: 6px 30px;
+    }
+
+    .cardsSection {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+     
+    .acceptedCards {
+    margin-bottom: 0;
+    }
+    .cards img {
+        margin-top: 0;
+        width: 3rem;
+        height: 3rem;
+    }
+} 
